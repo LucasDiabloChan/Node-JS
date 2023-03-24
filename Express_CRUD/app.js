@@ -8,12 +8,19 @@ Updated at: 24/03/2023
 // CARREGANDO OS MÓDULOS
     const express = require('express');
     const app = express();
-    const handler = require('express-handlebars');
+    const handlebars = require('express-handlebars');
     const bodyParser = require('body-parser');
     // const mongoose = require('mongoose');
 
 // CONFIGURAÇÕES
-
+    // Body Parser
+        app.use(bodyParser.urlencoded({extended: true}));
+        app.use(bodyParser.json());
+    // Handlebars
+        app.engine('handlebars', handlebars({defaultLayout: 'main'}));
+        app.set('view engine', 'handlebars');
+    // Mongoose
+        // Logo mais
 // ROTAS
 
 // OUTROS
