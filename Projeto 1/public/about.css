@@ -1,0 +1,29 @@
+/*
+Algorithm: Style for cadastro's page
+Author: Lucas Mateus
+Created: 22/02/2023
+Updated: 24/03/2023
+*/
+
+*{
+    color: greenyellow;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #303030;
+}
+
+li{
+    padding-top: 10px;
+}
+
+a{
+    color: lightskyblue;
+}

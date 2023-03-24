@@ -1,0 +1,52 @@
+/*
+Algorithm: Style for cadastro's page
+Author: Lucas Mateus
+Creation data: 22/02/2023
+Update data: 24/03/2023
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(49, 43, 43);
+}
+
+#main-content{
+    width: 90vw;
+    height: 90vh;
+    margin-top: 20px;
+    padding-top: 30px;
+    border-radius: 100px;
+    background-color: burlywood;
+    text-align: center;
+}
+
+#main-content:hover{
+    background-color: rgb(226, 207, 121);
+}
+
+@keyframes zoom{
+    0%{
+        width: 91vw;
+        height: 91vh;
+    }
+    30%{
+        width: 94vw;
+        height: 94vh;
+    }
+    70%{
+        width: 98vw;
+        height: 98vh;
+    }
+    100%{
+        width: 100vw;
+        height: 100vh;
+    }
+}

@@ -2,25 +2,30 @@
 Algoritmo: Configura todas as rotas
 Author: Lucas Mateus
 Data de criação: 21/03/2023
-Data de atualizaçao: ------.
+Data de atualizaçao: 24/03/2023
 */
 
 const express = require("express");
-const route = express();
-const ejsRender = require("ejs");
-const ejs = ejsRender();
+const route = express.Router();
 
 // INDEX
-    // GET
-    route.get("/index", function(req, res){
-        res.sendFile(__dirname + "html/index.html");
-    });
+route.get("/", function(req, res){
+    res.render('index.ejs');
+});
 
-// MOSTRA NOME
-    // GET
-    route.get("/amenodimero", (req, res) => {
-        let ejs = require('ejs');
-        let people = ['geddy', 'neil', 'alex'];
-        let html = ejs.render('<%= people.join(", "); %>', {people: people});
-        res.send(html);
-    });
+// SOBRE
+route.get("/about", (req, res) => {
+    res.render('about');
+});
+
+// USER
+route.get("/github", (req, res) =>{
+    res.render('github');
+});
+
+// CADPAGE
+route.get("/memes", (req, res) => {
+    res.render(__dirname + "/views/memes");
+});
+
+module.exports = route;
